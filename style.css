@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  font-family: "Press Start 2P", cursive;
+  background-image: url(/back.png);
+}
+
+.ads {
+  height: 80px;
+  width: 80%;
+  background-color: black;
+  margin: auto;
+}
+
+.top {
+  height: 20vh;
+  width: 96%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: saturate(180%) blur(10px);
+  color: white;
+}
+
+.container {
+  height: 200px;
+  width: 96%;
+  display: flex;
+  column-gap: 15px;
+  margin: auto;
+}
+
+.left {
+  width: 50%;
+  height: 64vh;
+  /* border: 1px black solid; */
+  margin-top: 15px;
+  column-gap: 15px;
+}
+
+.right {
+  width: 50%;
+  height: 60vh;
+  /* border: 1px black solid; */
+  margin-top: 15px;
+}
+
+.player-1 {
+  height: 32vh;
+  width: 100%;
+  margin: auto;
+  /* border: 1px black solid; */
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.player-2 {
+  height: 32vh;
+  width: 100%;
+  margin: auto;
+  /* border: 1px black solid; */
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+  border-radius: 20px;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  height: 10vh;
+  text-align: center;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.btn h1 {
+  font-size: 50px;
+  padding-top: 40px;
+}
+
+.down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.point-p1 {
+  height: 10vh;
+  text-align: center;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.point-p2 {
+  height: 10vh;
+  text-align: center;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.point-p2 h1,
+.point-p1 h1 {
+  padding-top: 10px;
+  font-size: 50px;
+}
