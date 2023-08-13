@@ -1,8 +1,10 @@
 var score1 = 0;
 var score2 = 0;
+var intervalId;
 
-const start1 = document.getElementById(".btn-start1"); //button left
-const start2 = document.getElementById(".btn-start2"); //button left
+//DOM
+const start1 = document.getElementById("btn-start1"); //start left
+const start2 = document.getElementById("btn-start2"); //start right
 const leftButtons = document.querySelectorAll(".player-1"); //button left
 const rightButtons = document.querySelectorAll(".player-2"); //button left
 const pointP1 = document.querySelectorAll(".point-p1"); //point
@@ -24,10 +26,49 @@ rightButtons.forEach((button) => {
   });
 });
 
+//Ehluuleh function
 function init() {
   P1.textContent = 0;
   P2.textContent = 0;
-  start1.textContent = "OMG";
+  start1.textContent = "START";
 }
 
-function timer() {}
+// 10sec
+function countDown10() {
+  let timeLeft = 10;
+
+  function updateCountdown() {
+    if (timeLeft > 0) {
+      start1.textContent = timeLeft.toFixed(1);
+      timeLeft -= 0.1;
+    } else {
+      clearInterval(intervalId);
+      console.log("カウントダウン終了");
+    }
+  }
+
+  updateCountdown();
+  intervalId = setInterval(updateCountdown, 100);
+}
+
+// 3sec
+function countDown3() {
+  let count = 3;
+
+  function updateCountdown() {
+    if (count >= 0) {
+      start1.textContent = count;
+      count--;
+    } else {
+      clearInterval(intervalId);
+      console.log("カウントダウン終了");
+    }
+  }
+
+  updateCountdown();
+  intervalId = setInterval(updateCountdown, 1000);
+}
+
+// countDown3();
+
+//countDown10();
