@@ -5,13 +5,6 @@ document.querySelector(".btn-start2").addEventListener("click", function () {
   console.log("clicked");
 });
 
-
-
-
-var click = function {
-     if 
-}
-
 document.querySelector(".player-1-1").addEventListener("click", function () {
   console.log("left clicked");
 });
