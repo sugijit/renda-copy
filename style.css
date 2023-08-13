@@ -51,7 +51,10 @@ body {
   margin-top: 15px;
 }
 
-.player-1 {
+.player-1-1,
+.player-1-2,
+.player-2-1,
+.player-2-2 {
   height: 32vh;
   width: 100%;
   margin: auto;
@@ -59,17 +62,6 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   margin-bottom: 15px;
-  backdrop-filter: saturate(180%) blur(10px);
-}
-
-.player-2 {
-  height: 32vh;
-  width: 100%;
-  margin: auto;
-  /* border: 1px black solid; */
-  background-color: rgba(0, 0, 0, 0.4);
-  margin-bottom: 15px;
-  border-radius: 20px;
   backdrop-filter: saturate(180%) blur(10px);
 }
 
@@ -79,16 +71,44 @@ body {
   align-items: center;
 }
 
-.btn {
-  height: 10vh;
-  text-align: center;
+.btn1 {
   width: 100%;
+  display: flex;
+}
+.btn2 {
+  display: flex;
+  width: 100%;
+}
+
+.btn-start1 {
+  margin-top: 50px !important;
+  height: 5vh;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  /* width: 100%; */
   /* border: 1px solid black; */
 }
 
-.btn h1 {
+.btn-start1 h1 {
   font-size: 30px;
   padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-start2 {
+  margin-top: 50px !important;
+  height: 5vh;
+  margin: auto;
+  display: inline-block;
+  /* width: 100%; */
+  /* border: 1px solid black; */
+}
+
+.btn-start2 h1 {
+  font-size: 30px;
+  text-align: center;
 }
 
 .down {
@@ -159,7 +179,10 @@ body {
     margin-top: 15px;
   }
 
-  .player-1 {
+  .player-1-1,
+  .player-1-2,
+  .player-2-1,
+  .player-2-2 {
     height: 25vh;
     width: 100%;
     margin: auto;
@@ -167,17 +190,6 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     margin-bottom: 15px;
-    backdrop-filter: saturate(180%) blur(10px);
-  }
-
-  .player-2 {
-    height: 25vh;
-    width: 100%;
-    margin: auto;
-    /* border: 1px black solid; */
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 15px;
-    border-radius: 20px;
     backdrop-filter: saturate(180%) blur(10px);
   }
 
@@ -187,16 +199,49 @@ body {
     align-items: center;
   }
 
-  .btn {
+  .btn1 {
     height: 10vh;
     text-align: center;
     width: 100%;
     /* border: 1px solid black; */
   }
 
-  .btn h1 {
+  .btn2 {
+    height: 10vh;
+    text-align: center;
+    width: 100%;
+    /* border: 1px solid black; */
+  }
+
+  .btn-start1 {
+    margin-top: 40px !important;
+    height: 5vh;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    /* width: 100%; */
+    /* border: 1px solid black; */
+  }
+
+  .btn-start1 h1 {
     font-size: 30px;
     padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-start2 {
+    margin-top: 40px !important;
+    height: 5vh;
+    margin: auto;
+    display: inline-block;
+    /* width: 100%; */
+    /* border: 1px solid black; */
+  }
+
+  .btn-start2 h1 {
+    font-size: 30px;
+    text-align: center;
   }
 
   .down {
