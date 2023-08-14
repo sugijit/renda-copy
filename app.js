@@ -12,19 +12,19 @@ const pointP2 = document.querySelectorAll(".point-p2"); //point
 const P1 = document.getElementById("1");
 const P2 = document.getElementById("2");
 
-leftButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    score1++;
-    P1.textContent = score1;
-  });
-});
+// leftButtons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     score1++;
+//     P1.textContent = score1;
+//   });
+// });
 
-rightButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    score2++;
-    P2.textContent = score2;
-  });
-});
+// rightButtons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     score2++;
+//     P2.textContent = score2;
+//   });
+// });
 
 // start1.forEach((button) => {
 //   button.addEventListener("click", function () {
@@ -57,12 +57,15 @@ function countDown10() {
       start1.textContent = timeLeft.toFixed(1);
       start2.textContent = timeLeft.toFixed(1);
       timeLeft -= 0.1;
+      return;
     } else {
       clearInterval(intervalId);
       console.log("カウントダウン終了");
     }
   }
-
+  if (timeLeft > 1) {
+    click(timeLeft);
+  }
   updateCountdown();
   intervalId = setInterval(updateCountdown, 100);
 }
@@ -85,6 +88,26 @@ function countDown3() {
 
   updateCountdown();
   intervalId = setInterval(updateCountdown, 1000);
+}
+
+function click(timeLeft) {
+  if (timeLeft > 0) {
+    leftButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        score1++;
+        P1.textContent = score1;
+      });
+    });
+
+    rightButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        score2++;
+        P2.textContent = score2;
+      });
+    });
+  } else {
+    console.log("AAA");
+  }
 }
 
 // countDown3();
