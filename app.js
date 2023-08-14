@@ -3,8 +3,8 @@ var score2 = 0;
 var intervalId;
 
 //DOM
-const start1 = document.getElementById("btn-start1"); //start left
-const start2 = document.getElementById("btn-start2"); //start right
+const start1 = document.querySelector(".btn-start1"); //start left
+const start2 = document.querySelector(".btn-start2"); //start right
 const leftButtons = document.querySelectorAll(".player-1"); //button left
 const rightButtons = document.querySelectorAll(".player-2"); //button left
 const pointP1 = document.querySelectorAll(".point-p1"); //point
@@ -26,6 +26,21 @@ rightButtons.forEach((button) => {
   });
 });
 
+// start1.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     countDown3();
+//   });
+// });
+
+start1.addEventListener("click", function () {
+  countDown3();
+});
+start2.addEventListener("click", function () {
+  countDown3();
+});
+
+function start() {}
+
 //Ehluuleh function
 function init() {
   P1.textContent = 0;
@@ -40,6 +55,7 @@ function countDown10() {
   function updateCountdown() {
     if (timeLeft > 0) {
       start1.textContent = timeLeft.toFixed(1);
+      start2.textContent = timeLeft.toFixed(1);
       timeLeft -= 0.1;
     } else {
       clearInterval(intervalId);
@@ -56,12 +72,14 @@ function countDown3() {
   let count = 3;
 
   function updateCountdown() {
-    if (count >= 0) {
+    if (count > 0) {
       start1.textContent = count;
+      start2.textContent = count;
       count--;
     } else {
       clearInterval(intervalId);
       console.log("カウントダウン終了");
+      countDown10();
     }
   }
 

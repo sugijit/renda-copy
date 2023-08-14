@@ -53,7 +53,7 @@ body {
 
 .player-1,
 .player-2 {
-  height: 32vh;
+  height: 30vh;
   width: 100%;
   margin: auto;
   /* border: 1px black solid; */
@@ -78,7 +78,7 @@ body {
   width: 100%;
 }
 
-#btn-start1 {
+.btn-start1 {
   margin-top: 50px !important;
   height: 5vh;
   text-align: center;
@@ -88,14 +88,14 @@ body {
   /* border: 1px solid black; */
 }
 
-#btn-start1 h1 {
+.btn-start1 h1 {
   font-size: 30px;
   padding-top: 40px;
   justify-content: center;
   align-items: center;
 }
 
-#btn-start2 {
+.btn-start2 {
   margin-top: 50px !important;
   height: 5vh;
   margin: auto;
@@ -104,7 +104,7 @@ body {
   /* border: 1px solid black; */
 }
 
-#btn-start2 h1 {
+.btn-start2 h1 {
   font-size: 30px;
   text-align: center;
 }
