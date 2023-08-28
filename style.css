@@ -39,7 +39,6 @@ body {
 .left {
   width: 50%;
   height: 64vh;
-  /* border: 1px black solid; */
   margin-top: 15px;
   column-gap: 15px;
 }
@@ -47,7 +46,6 @@ body {
 .right {
   width: 50%;
   height: 60vh;
-  /* border: 1px black solid; */
   margin-top: 15px;
 }
 
@@ -56,7 +54,6 @@ body {
   height: 30vh;
   width: 100%;
   margin: auto;
-  /* border: 1px black solid; */
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   margin-bottom: 15px;
@@ -84,8 +81,6 @@ body {
   text-align: center;
   display: inline-block;
   margin: auto;
-  /* width: 100%; */
-  /* border: 1px solid black; */
 }
 
 .btn-start1 h1 {
@@ -100,8 +95,6 @@ body {
   height: 5vh;
   margin: auto;
   display: inline-block;
-  /* width: 100%; */
-  /* border: 1px solid black; */
 }
 
 .btn-start2 h1 {
@@ -115,18 +108,20 @@ body {
   align-items: center;
 }
 
+.btn-dead {
+  pointer-events: none !important;
+}
+
 .point-p1 {
   height: 10vh;
   text-align: center;
   width: 100%;
-  /* border: 1px solid black; */
 }
 
 .point-p2 {
   height: 10vh;
   text-align: center;
   width: 100%;
-  /* border: 1px solid black; */
 }
 
 .point-p2 h1,
@@ -135,7 +130,21 @@ body {
   font-size: 50px;
 }
 
+.refresh {
+  text-align: center;
+  transform: translate(-1.5vw, -10vh);
+}
+.refresh img {
+  width: 50px;
+  position: absolute;
+}
+
 @media (max-width: 600px) {
+  .refresh {
+    text-align: center;
+    transform: translate(-5vw, -10vh);
+  }
+
   .ads {
     height: 60px;
     width: 100%;
@@ -165,7 +174,6 @@ body {
   .left {
     width: 50%;
     height: 50vh;
-    /* border: 1px black solid; */
     margin-top: 15px;
     column-gap: 15px;
   }
@@ -173,7 +181,6 @@ body {
   .right {
     width: 50%;
     height: 50vh;
-    /* border: 1px black solid; */
     margin-top: 15px;
   }
 
@@ -182,7 +189,6 @@ body {
     height: 25vh;
     width: 100%;
     margin: auto;
-    /* border: 1px black solid; */
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     margin-bottom: 15px;
@@ -199,14 +205,12 @@ body {
     height: 10vh;
     text-align: center;
     width: 100%;
-    /* border: 1px solid black; */
   }
 
   .btn2 {
     height: 10vh;
     text-align: center;
     width: 100%;
-    /* border: 1px solid black; */
   }
 
   .btn-start1 {
@@ -215,8 +219,6 @@ body {
     text-align: center;
     display: inline-block;
     margin: auto;
-    /* width: 100%; */
-    /* border: 1px solid black; */
   }
 
   .btn-start1 h1 {
@@ -231,8 +233,6 @@ body {
     height: 5vh;
     margin: auto;
     display: inline-block;
-    /* width: 100%; */
-    /* border: 1px solid black; */
   }
 
   .btn-start2 h1 {
@@ -250,14 +250,12 @@ body {
     height: 10vh;
     text-align: center;
     width: 100%;
-    /* border: 1px solid black; */
   }
 
   .point-p2 {
     height: 10vh;
     text-align: center;
     width: 100%;
-    /* border: 1px solid black; */
   }
 
   .point-p2 h1,

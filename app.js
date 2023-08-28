@@ -11,26 +11,10 @@ const pointP1 = document.querySelectorAll(".point-p1"); //point
 const pointP2 = document.querySelectorAll(".point-p2"); //point
 const P1 = document.getElementById("1");
 const P2 = document.getElementById("2");
-
-// leftButtons.forEach((button) => {
-//   button.addEventListener("click", function () {
-//     score1++;
-//     P1.textContent = score1;
-//   });
-// });
-
-// rightButtons.forEach((button) => {
-//   button.addEventListener("click", function () {
-//     score2++;
-//     P2.textContent = score2;
-//   });
-// });
-
-// start1.forEach((button) => {
-//   button.addEventListener("click", function () {
-//     countDown3();
-//   });
-// });
+const rightTop = document.getElementById("btnn1"); //button right
+const rightBottom = document.getElementById("btnn2"); //button right
+const leftTop = document.getElementById("btnn3"); //button left
+const leftBottom = document.getElementById("btnn4"); //button left
 
 start1.addEventListener("click", function () {
   countDown3();
@@ -39,7 +23,7 @@ start2.addEventListener("click", function () {
   countDown3();
 });
 
-function start() {}
+// function start() {}
 
 //Ehluuleh function
 function init() {
@@ -56,18 +40,36 @@ function countDown10() {
     if (timeLeft > 0) {
       start1.textContent = timeLeft.toFixed(1);
       start2.textContent = timeLeft.toFixed(1);
-      timeLeft -= 0.1;
-      return;
+      timeLeft = timeLeft - 0.1;
+      return timeLeft;
     } else {
       clearInterval(intervalId);
-      console.log("カウントダウン終了");
+      console.log("10sec カウントダウン終了");
+      rightTop.classList.add("btn-dead");
+      rightBottom.classList.add("btn-dead");
+      leftTop.classList.add("btn-dead");
+      leftBottom.classList.add("btn-dead");
+      decideWinner();
     }
   }
-  if (timeLeft > 1) {
+  if (timeLeft > 0) {
     click(timeLeft);
   }
   updateCountdown();
   intervalId = setInterval(updateCountdown, 100);
+}
+
+function decideWinner() {
+  if (P1.textContent === P2.textContent) {
+    start1.textContent = "DRAW";
+    start2.textContent = "DRAW";
+  } else if (P1.textContent > P2.textContent) {
+    start1.textContent = "WINNER";
+    start2.textContent = "LOSER!";
+  } else {
+    start1.textContent = "LOSER!";
+    start2.textContent = "WINNER";
+  }
 }
 
 // 3sec
@@ -81,7 +83,7 @@ function countDown3() {
       count--;
     } else {
       clearInterval(intervalId);
-      console.log("カウントダウン終了");
+      console.log("3sec カウントダウン終了");
       countDown10();
     }
   }
