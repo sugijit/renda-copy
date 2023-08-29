@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* disable text selection */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 body {
@@ -112,6 +116,10 @@ body {
   pointer-events: none !important;
 }
 
+.invisible {
+  display: none;
+}
+
 .point-p1 {
   height: 10vh;
   text-align: center;
@@ -137,6 +145,7 @@ body {
 .refresh img {
   width: 50px;
   position: absolute;
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 600px) {
