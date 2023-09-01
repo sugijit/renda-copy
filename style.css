@@ -222,6 +222,11 @@ body {
     width: 100%;
   }
 
+  .btn2 h1,
+  .btn1 h1 {
+    font-size: larger;
+  }
+
   .btn-start1 {
     margin-top: 40px !important;
     height: 5vh;
